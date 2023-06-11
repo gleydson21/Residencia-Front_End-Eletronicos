@@ -11,7 +11,7 @@ function Formulario({botao,eventoTeclado,cadastrar,obj, cancelar , remover , alt
                 :
                
                <div>
-                 <input type='button' value='Alterar' onclick={alterar} className='btn btn-warning'/>
+                 <input type='button' value='Alterar' onClick={alterar} className='btn btn-warning'/>
                  <input type='button' value='Remover' onClick= {remover} className='btn btn-danger'/>
                  <input type='button' value='Cancelar' onClick= {cancelar} className='btn btn-secondary'/>
                 </div>

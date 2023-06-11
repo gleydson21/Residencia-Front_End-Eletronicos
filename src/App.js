@@ -53,7 +53,7 @@ function App() {
   //Alterar
   const alterar = () =>{
     fetch('http://localhost:8080/alterar',{
-      method: 'put',
+      method: 'PUT',
       body: JSON.stringify(objProduto),
       headers: {
         'Content-Type': 'application/json',
@@ -131,7 +131,7 @@ function App() {
   // Selecionar produto
   const selecionarProduto = (indice)=>{
     setObjProduto(produtos[indice]);
-    setBtnCadastrar(false);
+    setBtnCadastrar(true);
   }
 
   //Retorno  
