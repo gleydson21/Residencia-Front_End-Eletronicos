@@ -5,7 +5,7 @@ import Tabela from './Tabela';
 
 function App() {
 
-  //Obbjeto Produto
+  //Objeto Produto
   const produto ={
     codigo: 0,
     nome:'',
@@ -22,7 +22,7 @@ function App() {
       fetch("http://localhost:8080/listar")
       .then(retorno => retorno.json())
       .then(retorno_convertido => setProdutos(retorno_convertido));
-}, [] );
+}, []);
 
 //Obtendo os dados do formulario
   const aoDigitar = (e) => {
@@ -126,12 +126,13 @@ function App() {
   //Limpar formulário
   const limparFormulario = () =>{
     setObjProduto(produto);
+    setBtnCadastrar(true);
   }
 
   // Selecionar produto
   const selecionarProduto = (indice)=>{
     setObjProduto(produtos[indice]);
-    setBtnCadastrar(true);
+    setBtnCadastrar(false);
   }
 
   //Retorno  
